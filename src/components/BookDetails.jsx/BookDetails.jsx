@@ -11,27 +11,28 @@ const BookDetails = () => {
 
     const handleReadList = () => {
         const result = setReadList(book.bookId);
-        if (result === true) {
-            toast("Added to Read List");
+        if (result) {
+            toast.success("Added to Read List");
         }
         
         else {
-            toast("Already in Read List");
+            toast.error("Already in Read List");
         }
     }
 
     const handleWishList = () => {
         const result = setWishList(book.bookId);
+
         if (result === true) {
-            toast("Added to Wish List");
+            toast.success("Added to Wish List");
         }
         
         else if (result === 'read') {
-            toast("Already in Read List");
+            toast.error("Already in Read List");
         }
         
         else {
-            toast("Already in Wish List");
+            toast.error("Already in Wish List");
         }
     }
 

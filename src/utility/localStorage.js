@@ -17,7 +17,7 @@ const setReadList = (id) => {
         removeFromWishList(id);
         return true;
     }
-    
+
     else {
         return false;
     }
@@ -34,22 +34,23 @@ const setWishList = (id) => {
         localStorage.setItem('wish-list', JSON.stringify(wishList));
         return true;
     }
-    
+
     else if (existsRead) {
         return 'read';
     }
-    
+
     else {
         return false;
     }
 }
 
 const removeFromWishList = (id) => {
-    const listItem = JSON.parse(localStorage.getItem('wish-list') || []);
-
-    const newList = listItem.filter(item => item !== id);
-
-    localStorage.setItem('wish-list', JSON.stringify(newList));
+    let listItem = localStorage.getItem('wish-list');
+    if (listItem) {
+        listItem = JSON.parse(listItem);
+        const newList = listItem.filter(item => item !== id);
+        localStorage.setItem('wish-list', JSON.stringify(newList));
+    }
 }
 
 export { getList, setReadList, setWishList };

@@ -56,10 +56,12 @@ const ListedBooks = () => {
                 </ul>
             </details>
 
-            <button onClick={handleReadList}>Read List</button>
-            <button onClick={handleWishList}>Wish List</button>
-
             <section className=" w-full">
+                <div className=" mb-5">
+                    <button className=" px-4 py-2 focus:border-2 focus:border-b-0 rounded-t-lg" onClick={handleReadList}>Read Books</button>
+                    <button className=" px-4 py-2 focus:border-2 focus:border-b-0 rounded-t-lg" onClick={handleWishList}>Wishlist Books</button>
+                    <hr />
+                </div>
                 <div className=" flex flex-col gap-3">
                     {
                         sortedBooks?.map((book, idx) => <BooksLists key={idx} book={book}></BooksLists>)
