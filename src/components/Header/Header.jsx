@@ -5,11 +5,31 @@ const Header = () => {
 
     const links =
         <>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/listed-books">Listed Books</NavLink></li>
-            <li><NavLink to="/pages-to-read">Pages to Read</NavLink></li>
-            {/* <li><NavLink to="/"></NavLink></li>
-            <li><NavLink to="/"></NavLink></li> */}
+            <li><NavLink to="/" className={({ isActive }) =>
+                isActive
+                    ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
+                    : " "
+            }>Home</NavLink></li>
+            <li><NavLink to="/listed-books" className={({ isActive }) =>
+                isActive
+                    ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
+                    : " "
+            }>Listed Books</NavLink></li>
+            <li><NavLink to="/pages-to-read" className={({ isActive }) =>
+                isActive
+                    ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
+                    : " "
+            }>Pages to Read</NavLink></li>
+            {/* <li><NavLink to="/pages-to-read" className={({ isActive }) =>
+                isActive
+                    ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
+                    : " "
+            }>Pages to Read</NavLink></li>
+            <li><NavLink to="/pages-to-read" className={({ isActive }) =>
+                isActive
+                    ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
+                    : " "
+            }>Pages to Read</NavLink></li> */}
         </>
 
     return (
@@ -24,7 +44,7 @@ const Header = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl font-bold">Book Vibe</a>
+                    <a className="normal-case text-2xl font-bold"><NavLink to="/">Book Vibe</NavLink></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -32,8 +52,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn bg-[#23BE0A] text-white">Sign In</a>
-                    <a className="btn bg-[#59C6D2] text-white">Sign Up</a>
+                    <a className="btn bg-[#23BE0A] text-white lg:w-24 mr-2">Sign In</a>
+                    <a className="btn bg-[#59C6D2] text-white lg:w-24">Sign Up</a>
                 </div>
             </div>
         </>
