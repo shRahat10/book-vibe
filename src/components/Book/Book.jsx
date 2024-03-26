@@ -6,7 +6,7 @@ const Book = ({ book }) => {
 
     return (
         <div>
-            <div className="card w-full bg-base-100 shadow-xl p-6">
+            <div className="card w-full bg-base-100 shadow-xl p-4 border">
                 <figure className=" h-56 bg-[#F3F3F3]"><img src={image} alt="Loading..." /></figure>
                 <div className="card-body text-xs">
                     <div className=" flex gap-2">
