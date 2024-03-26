@@ -12,7 +12,7 @@
             "Dating",
             "Relationships"
         ],
-        "publisher": "Unknown Publisher",
+        "publisher": "Independently published",
         "yearOfPublishing": 2015
     },
     {
@@ -50,7 +50,7 @@
     {
         "bookId": 4,
         "bookName": "The Scholarship Monthly Planner",
-        "author": "Unknown Author",
+        "author": "Marianne Ragins",
         "image": "https://i.ibb.co/PFCVpMc/kindpng-4022054-1.png",
         "review": "A practical organizer designed to help students keep track of scholarship deadlines, requirements, and application progress.",
         "totalPages": 160,
@@ -66,7 +66,7 @@
     {
         "bookId": 5,
         "bookName": "Annotated Texas Family Code",
-        "author": "Unknown Author",
+        "author": "John J. Sampson",
         "image": "https://i.ibb.co/FnNV6SP/kindpng-81724-1.png",
         "review": "A comprehensive reference guide providing annotations and explanations of the Texas Family Code for legal professionals and students.",
         "totalPages": 800,
