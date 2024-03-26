@@ -2,27 +2,46 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { useLoaderData } from "react-router-dom";
 import BooksLists from "../BooksLists/BooksLists";
 import { useState } from "react";
+import { getList, setReadList, setWishList } from "../../utility/localStorage";
 
 const ListedBooks = () => {
     const books = useLoaderData();
-    const [sortedBooks, setSortedBooks] = useState([]);
+    const [sortedBooks, setSortedBooks] = useState(books);
 
     const handleSorting = (sortBy) => {
         let sorted;
         switch (sortBy) {
             case 'rating':
-                sorted = [...books].sort((a, b) => b.rating - a.rating);
+                sorted = [...sortedBooks].sort((a, b) => b.rating - a.rating);
                 break;
             case 'totalPages':
-                sorted = [...books].sort((a, b) => b.totalPages - a.totalPages);
+                sorted = [...sortedBooks].sort((a, b) => b.totalPages - a.totalPages);
                 break;
             case 'yearOfPublishing':
-                sorted = [...books].sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+                sorted = [...sortedBooks].sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
                 break;
             default:
-                sorted = [...books];
+                sorted = [...sortedBooks];
         }
         setSortedBooks(sorted);
+    }
+
+    const handleReadList = () => {
+        const readList = getList('read-list');
+        const filtered = books.filter(book => readList.includes(book.bookId));
+        if (filtered.length > 0) {
+            setSortedBooks(filtered);
+        }
+        else setSortedBooks([]);
+    }
+
+    const handleWishList = () => {
+        const wishList = getList('wish-list');
+        const filtered = books.filter(book => wishList.includes(book.bookId));
+        if (filtered.length > 0) {
+            setSortedBooks(filtered);
+        }
+        else setSortedBooks([]);
     }
 
     return (
@@ -37,10 +56,13 @@ const ListedBooks = () => {
                 </ul>
             </details>
 
+            <button onClick={handleReadList}>Read List</button>
+            <button onClick={handleWishList}>Wish List</button>
+
             <section className=" w-full">
                 <div className=" flex flex-col gap-3">
                     {
-                        sortedBooks.length > 0 ? sortedBooks?.map((book, idx) => <BooksLists key={idx} book={book}></BooksLists>) : books?.map((book, idx) => <BooksLists key={idx} book={book}></BooksLists>)
+                        sortedBooks?.map((book, idx) => <BooksLists key={idx} book={book}></BooksLists>)
                     }
                 </div>
             </section>
