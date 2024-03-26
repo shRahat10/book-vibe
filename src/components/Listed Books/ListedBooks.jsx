@@ -58,6 +58,7 @@ const ListedBooks = () => {
 
             <section className=" w-full">
                 <div className=" mb-5">
+                    <button className=" px-4 py-2 focus:border-2 focus:border-b-0 rounded-t-lg" onClick={()=>setSortedBooks(books)}>All Books</button>
                     <button className=" px-4 py-2 focus:border-2 focus:border-b-0 rounded-t-lg" onClick={handleReadList}>Read Books</button>
                     <button className=" px-4 py-2 focus:border-2 focus:border-b-0 rounded-t-lg" onClick={handleWishList}>Wishlist Books</button>
                     <hr />
