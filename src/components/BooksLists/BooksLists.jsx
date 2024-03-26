@@ -56,7 +56,7 @@ const BooksLists = ({ book }) => {
 
                 <div className=" flex flex-wrap gap-4">
                     <div className=" px-4 py-2 text-[#328EFF] w-fit rounded-3xl bg-[#328EFF26] flex gap-2 items-center">
-                        <p>Rating: {rating}</p>
+                        <p>Category: {category}</p>
                     </div>
                     <div className=" px-4 py-2 text-[#FFAC33] w-fit rounded-3xl bg-[#FFAC3326] flex gap-2 items-center">
                         <p>Rating: {rating}</p>
