@@ -3,15 +3,14 @@
         "bookId": 1,
         "bookName": "The Dating Playbook for Men",
         "author": "Andrew Ferebee",
-        "image": "https://i.ibb.co/kqTz0qd/pngwing-1.png",
+        "image": "https://i.ibb.co/Dwsr4RL/pngwing-1.png",
         "review": "A comprehensive guide to mastering the art of dating, offering practical advice and insights for men seeking to improve their romantic lives.",
         "totalPages": 320,
         "rating": 4.5,
         "category": "Self-help",
         "tags": [
             "Dating",
-            "Relationships",
-            "Self-improvement"
+            "Relationships"
         ],
         "publisher": "Unknown Publisher",
         "yearOfPublishing": 2015
@@ -27,8 +26,7 @@
         "category": "Personal Finance",
         "tags": [
             "Money",
-            "Psychology",
-            "Wealth"
+            "Psychology"
         ],
         "publisher": "Financial Freedom Press",
         "yearOfPublishing": 2019
@@ -44,8 +42,7 @@
         "category": "Young Adult",
         "tags": [
             "Social Justice",
-            "Family",
-            "Coming of Age"
+            "Family"
         ],
         "publisher": "Balzer + Bray",
         "yearOfPublishing": 2017
@@ -61,15 +58,14 @@
         "category": "Education",
         "tags": [
             "Scholarships",
-            "Planner",
-            "Organization"
+            "Planner"
         ],
         "publisher": "Scholarship Publishers",
         "yearOfPublishing": 2020
     },
     {
         "bookId": 5,
-        "bookName": "Annotated Texas Family Code 2019",
+        "bookName": "Annotated Texas Family Code",
         "author": "Unknown Author",
         "image": "https://i.ibb.co/FnNV6SP/kindpng-81724-1.png",
         "review": "A comprehensive reference guide providing annotations and explanations of the Texas Family Code for legal professionals and students.",
@@ -78,8 +74,7 @@
         "category": "Legal",
         "tags": [
             "Texas Law",
-            "Family Code",
-            "Legal Reference"
+            "Family Code"
         ],
         "publisher": "Legal Eagle Publishing",
         "yearOfPublishing": 2019
@@ -95,8 +90,7 @@
         "category": "Religion",
         "tags": [
             "Christianity",
-            "Faith",
-            "Spirituality"
+            "Faith"
         ],
         "publisher": "Bethany House Publishers",
         "yearOfPublishing": 2001
@@ -112,8 +106,7 @@
         "category": "Communication",
         "tags": [
             "Conversation",
-            "Interpersonal Skills",
-            "Mindfulness"
+            "Skills"
         ],
         "publisher": "Harmony",
         "yearOfPublishing": 2017
@@ -128,9 +121,8 @@
         "rating": 4.9,
         "category": "Theology",
         "tags": [
-            "Christian Apologetics",
-            "Evidence",
-            "Investigation"
+            "Christian",
+            "Evidence"
         ],
         "publisher": "David C Cook",
         "yearOfPublishing": 2013
@@ -145,9 +137,8 @@
         "rating": 4.3,
         "category": "Fantasy",
         "tags": [
-            "Epic Fantasy",
-            "Magic",
-            "Intrigue"
+            "Fantasy",
+            "Magic"
         ],
         "publisher": "Tor Books",
         "yearOfPublishing": 2019
