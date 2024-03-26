@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import Book from "../Book/Book";
 
 const Home = () => {
+    const books = useLoaderData();
 
-    const [books, setBooks] = useState([]);
+    // const [books, setBooks] = useState([]);
 
-    useEffect(()=>{
-        fetch('book.json')
-        .then(res => res.json())
-        .then(data => setBooks(data))
-    }, [])
+    // useEffect(()=>{
+    //     fetch('book.json')
+    //     .then(res => res.json())
+    //     .then(data => setBooks(data))
+    // }, [])
 
     return (
         <div className=" space-y-14">
