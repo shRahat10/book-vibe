@@ -20,9 +20,9 @@ const setReadList = (id) => {
 
 const setWishList = (id) => {
     const wishList = getList('wish-list');
+    const existsWish = wishList.find(item => item === id);
     const readList = getList('read-list');
     const existsRead = readList.find(item => item === id);
-    const existsWish = wishList.find(item => item === id);
 
     if (!existsRead && !existsWish) {
         wishList.push(id);
