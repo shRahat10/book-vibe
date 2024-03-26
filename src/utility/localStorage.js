@@ -9,24 +9,32 @@ const getList = (listName) => {
 
 const setReadList = (id) => {
     const readList = getList('read-list');
-    const exists = readList.find(item => item === id);
+    const exists = readList.includes(id);
 
     if (!exists) {
         readList.push(id);
         localStorage.setItem('read-list', JSON.stringify(readList));
         removeFromWishList(id);
+        return true;
+    }
+    else {
+        return false;
     }
 }
 
 const setWishList = (id) => {
     const wishList = getList('wish-list');
-    const existsWish = wishList.find(item => item === id);
+    const existsWish = wishList.includes(id);
     const readList = getList('read-list');
-    const existsRead = readList.find(item => item === id);
+    const existsRead = readList.includes(id);
 
     if (!existsRead && !existsWish) {
         wishList.push(id);
         localStorage.setItem('wish-list', JSON.stringify(wishList));
+        return true;
+    }
+    else {
+        return false;
     }
 }
 

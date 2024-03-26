@@ -1,23 +1,30 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { setReadList, setWishList } from "../../utility/localStorage";
+import { getList, setReadList, setWishList } from "../../utility/localStorage";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const BookDetails = ({ }) => {
-
+const BookDetails = () => {
     const books = useLoaderData();
     const { id } = useParams();
     const idInt = parseInt(id);
     const book = books.find(book => book.bookId === idInt);
 
-    const handleReadList = () =>{
-        setReadList(book.bookId);
-        toast("Added to Read List");
+    const handleReadList = () => {
+        const added = setReadList(book.bookId);
+        if (added) {
+            toast("Added to Read List");
+        } else {
+            toast("Already Added");
+        }
     }
 
-    const handleWishList = () =>{
-        setWishList(book.bookId);
-        toast("Added to Wish List");
+    const handleWishList = () => {
+        const added = setWishList(book.bookId);
+        if (added) {
+            toast("Added to Wish List");
+        } else {
+            toast("Already Added or Read");
+        }
     }
 
 
