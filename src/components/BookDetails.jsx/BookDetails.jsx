@@ -10,20 +10,28 @@ const BookDetails = () => {
     const book = books.find(book => book.bookId === idInt);
 
     const handleReadList = () => {
-        const added = setReadList(book.bookId);
-        if (added) {
+        const result = setReadList(book.bookId);
+        if (result === true) {
             toast("Added to Read List");
-        } else {
-            toast("Already Added");
+        }
+        
+        else {
+            toast("Already in Read List");
         }
     }
 
     const handleWishList = () => {
-        const added = setWishList(book.bookId);
-        if (added) {
+        const result = setWishList(book.bookId);
+        if (result === true) {
             toast("Added to Wish List");
-        } else {
-            toast("Already Added or Read");
+        }
+        
+        else if (result === 'read') {
+            toast("Already in Read List");
+        }
+        
+        else {
+            toast("Already in Wish List");
         }
     }
 

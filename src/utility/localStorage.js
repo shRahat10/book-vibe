@@ -17,6 +17,7 @@ const setReadList = (id) => {
         removeFromWishList(id);
         return true;
     }
+    
     else {
         return false;
     }
@@ -33,6 +34,11 @@ const setWishList = (id) => {
         localStorage.setItem('wish-list', JSON.stringify(wishList));
         return true;
     }
+    
+    else if (existsRead) {
+        return 'read';
+    }
+    
     else {
         return false;
     }
