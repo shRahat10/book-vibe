@@ -1,4 +1,5 @@
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 
 const BooksLists = ({ book }) => {
@@ -61,7 +62,7 @@ const BooksLists = ({ book }) => {
                     <div className=" px-4 py-2 text-[#FFAC33] w-fit rounded-3xl bg-[#FFAC3326] flex gap-2 items-center">
                         <p>Rating: {rating}</p>
                     </div>
-                    <button className=" px-4 py-2 text-white w-fit rounded-3xl bg-[#23BE0A] flex gap-2 items-center">View Details</button>
+                    <button className=" px-4 py-2 text-white w-fit rounded-3xl bg-[#23BE0A] flex gap-2 items-center"><Link to={`/book-details/${bookId}`}>View Details</Link></button>
                 </div>
             </div>
         </div>

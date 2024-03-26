@@ -40,7 +40,7 @@ const ListedBooks = () => {
             <section className=" w-full">
                 <div className=" flex flex-col gap-3">
                     {
-                        sortedBooks.length > 0 ? sortedBooks.map((book, idx) => <BooksLists key={idx} book={book}></BooksLists>) : books.map((book, idx) => <BooksLists key={idx} book={book}></BooksLists>)
+                        sortedBooks.length > 0 ? sortedBooks?.map((book, idx) => <BooksLists key={idx} book={book}></BooksLists>) : books?.map((book, idx) => <BooksLists key={idx} book={book}></BooksLists>)
                     }
                 </div>
             </section>
