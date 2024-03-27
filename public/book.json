@@ -1,7 +1,7 @@
 [
     {
         "bookId": 1,
-        "bookName": "The Dating Playbook for Men",
+        "bookName": "The Dating Playbook",
         "author": "Andrew Ferebee",
         "image": "https://i.ibb.co/Dwsr4RL/pngwing-1.png",
         "review": "A comprehensive guide to mastering the art of dating, offering practical advice and insights for men seeking to improve their romantic lives.",
@@ -49,7 +49,7 @@
     },
     {
         "bookId": 4,
-        "bookName": "The Scholarship Monthly Planner",
+        "bookName": "Scholarship Monthly Planner",
         "author": "Marianne Ragins",
         "image": "https://i.ibb.co/PFCVpMc/kindpng-4022054-1.png",
         "review": "A practical organizer designed to help students keep track of scholarship deadlines, requirements, and application progress.",
@@ -65,7 +65,7 @@
     },
     {
         "bookId": 5,
-        "bookName": "Annotated Texas Family Code",
+        "bookName": "Annotated Texas Family",
         "author": "John J. Sampson",
         "image": "https://i.ibb.co/FnNV6SP/kindpng-81724-1.png",
         "review": "A comprehensive reference guide providing annotations and explanations of the Texas Family Code for legal professionals and students.",
