@@ -14,7 +14,7 @@ const setReadList = (id) => {
     if (!exists) {
         readList.push(id);
         localStorage.setItem('read-list', JSON.stringify(readList));
-        removeFromWishList(id);
+        // removeFromWishList(id);
         return true;
     }
 
@@ -35,6 +35,10 @@ const setWishList = (id) => {
         return true;
     }
 
+    else if (existsWish) {
+        return false;
+    }
+    
     else if (existsRead) {
         return 'read';
     }
@@ -44,13 +48,13 @@ const setWishList = (id) => {
     }
 }
 
-const removeFromWishList = (id) => {
-    let listItem = localStorage.getItem('wish-list');
-    if (listItem) {
-        listItem = JSON.parse(listItem);
-        const newList = listItem.filter(item => item !== id);
-        localStorage.setItem('wish-list', JSON.stringify(newList));
-    }
-}
+// const removeFromWishList = (id) => {
+//     let listItem = localStorage.getItem('wish-list');
+//     if (listItem) {
+//         listItem = JSON.parse(listItem);
+//         const newList = listItem.filter(item => item !== id);
+//         localStorage.setItem('wish-list', JSON.stringify(newList));
+//     }
+// }
 
 export { getList, setReadList, setWishList };
