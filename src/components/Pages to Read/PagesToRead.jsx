@@ -31,15 +31,7 @@ const PageToRead = () => {
     return (
         <div>
             <ResponsiveContainer width='100%' height={500}>
-                <BarChart
-                    data={data}
-                    margin={{
-                        top: 50,
-                        right: 10,
-                        left: 10,
-                        bottom: 50,
-                    }}
-                >
+                <BarChart data={data} margin={{ top: 50, right: 10, left: 10, bottom: 50, }} >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="bookName" interval={0} angle={-65} textAnchor="end" tick={{ fontSize: 12 }} height={100} tickFormatter={(value) => value.split(' ').map((word, index) => index % 2 === 0 ? word : '\n' + word)} />
                     <YAxis />
