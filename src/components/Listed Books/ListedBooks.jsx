@@ -6,7 +6,11 @@ import { getList, setReadList, setWishList } from "../../utility/localStorage";
 
 const ListedBooks = () => {
     const books = useLoaderData();
-    const [sortedBooks, setSortedBooks] = useState(books);
+    const readList = getList('read-list');
+    const readFiltered = books.filter(book => readList.includes(book.bookId));
+    const wishList = getList('wish-list');
+    const wishFiltered = books.filter(book => wishList.includes(book.bookId));
+    const [sortedBooks, setSortedBooks] = useState(readFiltered);
 
     const handleSorting = (sortBy) => {
         let sorted;
@@ -27,19 +31,15 @@ const ListedBooks = () => {
     }
 
     const handleReadList = () => {
-        const readList = getList('read-list');
-        const filtered = books.filter(book => readList.includes(book.bookId));
-        if (filtered.length > 0) {
-            setSortedBooks(filtered);
+        if (readFiltered.length > 0) {
+            setSortedBooks(readFiltered);
         }
         else setSortedBooks([]);
     }
 
     const handleWishList = () => {
-        const wishList = getList('wish-list');
-        const filtered = books.filter(book => wishList.includes(book.bookId));
-        if (filtered.length > 0) {
-            setSortedBooks(filtered);
+        if (wishFiltered.length > 0) {
+            setSortedBooks(wishFiltered);
         }
         else setSortedBooks([]);
     }
@@ -58,7 +58,6 @@ const ListedBooks = () => {
 
             <section className=" w-full">
                 <div className=" mb-5">
-                    <button className=" px-4 py-2 focus:border-2 focus:border-b-0 rounded-t-lg" onClick={()=>setSortedBooks(books)}>All Books</button>
                     <button className=" px-4 py-2 focus:border-2 focus:border-b-0 rounded-t-lg" onClick={handleReadList}>Read Books</button>
                     <button className=" px-4 py-2 focus:border-2 focus:border-b-0 rounded-t-lg" onClick={handleWishList}>Wishlist Books</button>
                     <hr />
