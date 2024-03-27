@@ -12,6 +12,7 @@ import BookDetails from './components/BookDetails.jsx/BookDetails';
 import ListedBooks from './components/Listed Books/ListedBooks';
 import PagesToRead from './components/Pages to Read/PagesToRead';
 import Authors from './components/Authors/Authors';
+import Subscription from './components/Subscription/Subscription';
 
 
 const router = createBrowserRouter([
@@ -44,7 +45,11 @@ const router = createBrowserRouter([
         path: '/authors',
         element: <Authors></Authors>,
         loader: () => fetch('/book.json'),
-      }
+      },
+      {
+        path: '/subscription',
+        element: <Subscription></Subscription>
+      },
     ]
   },
 ]);

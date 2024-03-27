@@ -25,6 +25,11 @@ const Header = () => {
                     ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
                     : " "
             }>Authors</NavLink></li>
+            <li><NavLink to="/subscription" className={({ isActive }) =>
+                isActive
+                    ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
+                    : " "
+            }>Subscription</NavLink></li>
             
         </>
 
