@@ -8,8 +8,10 @@ const ListedBooks = () => {
     const books = useLoaderData();
     const readList = getList('read-list');
     const readFiltered = books.filter(book => readList.includes(book.bookId));
+    
     const wishList = getList('wish-list');
     const wishFiltered = books.filter(book => wishList.includes(book.bookId));
+
     const [sortedBooks, setSortedBooks] = useState(readFiltered);
     const [activeTab, setActiveTab] = useState(0);
 
@@ -33,9 +35,12 @@ const ListedBooks = () => {
 
     const handleTabChange = (index) => {
         setActiveTab(index);
+
         if (index === 0) {
             setSortedBooks(readFiltered);
-        } else {
+        }
+        
+        else if (index === 1) {
             setSortedBooks(wishFiltered);
         }
     };
@@ -70,9 +75,9 @@ const ListedBooks = () => {
                             style={{ display: activeTab === 0 ? 'block' : 'none' }}
                         >
                             <div className="flex flex-col gap-3">
-                                {sortedBooks?.map((book, idx) => (
-                                    <BooksLists key={idx} book={book}></BooksLists>
-                                ))}
+                                {
+                                    sortedBooks?.map((book, idx) => (<BooksLists key={idx} book={book}></BooksLists>))
+                                }
                             </div>
                         </div>
 
@@ -91,9 +96,9 @@ const ListedBooks = () => {
                             style={{ display: activeTab === 1 ? 'block' : 'none' }}
                         >
                             <div className="flex flex-col gap-3">
-                                {wishFiltered?.map((book, idx) => (
-                                    <BooksLists key={idx} book={book}></BooksLists>
-                                ))}
+                                {
+                                    sortedBooks?.map((book, idx) => (<BooksLists key={idx} book={book}></BooksLists>))
+                                }
                             </div>
                         </div>
                     </div>
