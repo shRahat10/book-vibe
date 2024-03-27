@@ -20,16 +20,12 @@ const Header = () => {
                     ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
                     : " "
             }>Pages to Read</NavLink></li>
-            {/* <li><NavLink to="/pages-to-read" className={({ isActive }) =>
+            <li><NavLink to="/authors" className={({ isActive }) =>
                 isActive
                     ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
                     : " "
-            }>Pages to Read</NavLink></li>
-            <li><NavLink to="/pages-to-read" className={({ isActive }) =>
-                isActive
-                    ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
-                    : " "
-            }>Pages to Read</NavLink></li> */}
+            }>Authors</NavLink></li>
+            
         </>
 
     return (
