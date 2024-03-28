@@ -12,7 +12,7 @@ const Home = () => {
                     <h1 className=" text-5xl font-bold leading-[70px]">Books to freshen<br />up your bookshelf</h1>
                     <a className="btn bg-[#23BE0A] text-white w-32 mt-10"><NavLink to="/listed-books">View The List</NavLink></a>
                 </div>
-                <img src="./public/images/pngwing.png" alt="" />
+                <img src="/images/pngwing.png" alt="" />
             </section>
 
             <section>
