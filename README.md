@@ -2,7 +2,7 @@
 
 This is a website for book enthusiasts to explore and manage their reading lists.
 
-```https://book-vibe-two.vercel.app/```
+```https://book-vibe-iota.vercel.app/```
 
 ## Features
 
