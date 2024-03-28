@@ -30,7 +30,7 @@ const Header = () => {
                     ? " font-bold border-2 border-[#23BE0A] text-[#23BE0A]"
                     : " "
             }>Subscription</NavLink></li>
-            
+
         </>
 
     return (
@@ -45,7 +45,7 @@ const Header = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="normal-case text-2xl font-bold"><NavLink to="/">Book Vibe</NavLink></a>
+                    <button className="normal-case text-2xl font-bold"><NavLink to="/">Book Vibe</NavLink></button>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
