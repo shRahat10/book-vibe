@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Book from "../Book/Book";
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
             <section className=" flex flex-col lg:flex-row justify-between items-center px-20 bg-[#1313130D] rounded-3xl h-fit lg:h-[500px] py-4">
                 <div>
                     <h1 className=" text-5xl font-bold leading-[70px]">Books to freshen<br />up your bookshelf</h1>
-                    <a className="btn bg-[#23BE0A] text-white w-32 mt-10"><NavLink to="/listed-books">View The List</NavLink></a>
+                    <a className="btn bg-[#23BE0A] text-white w-32 mt-10"><Link to="/listed-books">View The List</Link></a>
                 </div>
                 <img src="/images/pngwing.png" alt="" />
             </section>
